@@ -1,1 +1,1 @@
-My code
+This is better solution
