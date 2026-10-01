@@ -1,1 +1,7 @@
-This is better solution
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
