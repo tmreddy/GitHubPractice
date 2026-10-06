@@ -27,5 +27,14 @@ jobs:
     - name: Build image
       run: docker build -t my-app:latest .
 
+    - name: Save image
+      run: docker save my-app:latest -o my-app.tar
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: docker-image
+        path: my-app.tar
+
     - name: Test
       run: go test -v ./...
